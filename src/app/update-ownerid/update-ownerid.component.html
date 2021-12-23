@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    Task ID :
+    <input type="number" name="task_ID" formControlName="task_ID"/>
+    <br/>
+    <br/>
+
+    OWNER ID:
+   <input type="text"  name="owner_ID" formControlName="owner_ID"/>
+    <br/>
+    <br/>
+
+    <button type = "button" class= "btn btn-success"(click)="onSubmit(form.value)">Update</button>    
+</form>
+

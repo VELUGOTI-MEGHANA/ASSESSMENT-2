@@ -1,0 +1,28 @@
+
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    STATUS :
+    <input type="text" name="status" formControlName="status"/>
+    <br/>
+    <br/>
+
+  
+
+    <button type = "button" class= "btn btn-success"(click)="onSubmit(form.value)">TRACK STATUS</button>    
+</form>
+
+<h3>STATUS DETAILS</h3>
+<div *ngFor ="let task of tasks">
+    Task-ID:{{task.task_ID}} <br/>
+    Owner-ID:{{task.owner_ID}}<br/>
+    Creator-ID:{{task.creator_ID}}<br/>
+    Name:{{task.name}}<br/>
+    Description:{{task.description}}<br/>
+    Status:{{task.status}}<br/>
+    Priority:{{task.priority}}<br/>
+    Notes:{{task.notes}}<br/>
+    IsBookmarked:{{task.isbookmarked}}<br/>
+    Created-on:{{task.created_ON}}<br/>
+    Status-changed-on:{{task.status_CHANGED_ON}}<br/><br>
+
+</div>

@@ -1,0 +1,135 @@
+
+     <form #formRef="ngForm" (ngSubmit)="sendData()">
+        <div class="form-group">
+             
+                <label for="user_id">User ID:</label>
+                <input type="text" class="form-control" id="user_id" name="userid" [(ngModel)] ="user_id">
+    
+            
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" class="form-control" id="password"  name="password" [(ngModel)]="password">
+        </div>
+    
+        <div class="form-group">
+            <label for="user_name">User Name:</label>
+            <input type="text" class="form-control" id="user_name"   name ="username" [(ngModel)]="user_name">
+        </div>
+    
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email"   name="email" [(ngModel)]="email">
+            
+        </div>
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input tyoe="" id="first_name"  class="form-control"  name="firstname" [(ngModel)]="first_name">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="lastname"  [(ngModel)]="last_name">
+        </div>
+    
+        <div class="form-group">
+            <label for="contact_number">Contact Number</label>
+            
+            <input type="number" class="form-control" id="contact_number" name="contactnumber"  [(ngModel)]="contact_number">
+        </div>
+
+        <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text" class="form-control" id="role" name="role"  [(ngModel)]="role">
+        </div>
+
+        <div class="form-group">
+            <label for="isactive">ISACTIVE</label>
+            <select name="" id="isactive" class="form-select"  name="isactive" [(ngModel)]="is_active">
+                <option value="">-------choose your option--------</option>
+                <option value="true">TRUE</option>
+                <option value="false">FALSE</option>
+                
+            </select>
+    
+        </div>
+        
+        <div class="form-group">
+            <label for="dob">Date Of Birth</label>
+            <input type="text" class="form-control" id="dob"  name="dob" [(ngModel)]="dob">
+            
+        </div><br/>
+        <div>
+
+            <div class="form-group">
+                <label for="createdon">CreatedOn</label>
+                <input type="text" class="form-control" id="createdon"   name="createdon" [(ngModel)]="createdon">
+            </div>
+    
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+        <div class="card" *ngIf="success">
+            <div class="card-header bg-success">
+                <div class="text-center">USER STATUS</div>
+            </div>
+            <div class="card-body">
+                <div class="text-success">
+                    <h4>User Added Successfully....!</h4>
+                </div>
+                <table class="table  table-response">
+                    <tbody>
+      
+                      
+                    
+                  <tr>
+                      <td>USER ID:</td>
+                      <td>{{resuser.user_ID}}</td>
+                  </tr>
+                  <tr>
+                      <td>PASSWORD:</td>
+                      <td>{{resuser.password}}</td>
+                  </tr>
+                  <tr>
+                      <td>USERNAME:</td>
+                      <td>{{resuser.username}}</td>
+                  </tr>
+                  <tr>
+                      <td> EMAIL:</td>
+                      <td>{{resuser.email}}</td>
+                  </tr>
+                  <tr>
+                      <td>FIRST NAME:</td>
+                      <td>{{resuser.first_NAME}}</td>
+                  </tr>
+                  <tr>
+                      <td>LAST NAME</td>
+                      <td>{{resuser.last_NAME}}</td>
+                  </tr>
+                  <tr>
+                      <td>CONTACT NUMBER:</td>
+                      <td>{{resuser.contact_NUMBER}}</td>
+                  </tr>
+                  <tr>
+                      <td>ROLE:</td>
+                      <td>{{resuser.role}}</td>
+                  </tr>
+                  <tr>
+                      <td> IS ACTIVE:</td>
+                      <td>{{resuser.is_ACTIVE}}</td>
+                  </tr>
+                  <tr>
+                      <td>DATE OF BIRTH</td>
+                      <td>{{resuser.dob}}</td>
+                  </tr>
+                  <tr>
+                      <td>CREATED ON:</td>
+                      <td>{{resuser.created_ON}}</td>
+                  </tr>
+              </tbody>
+                </table>
+            </div>
+      
+        
+          </div>
+          <a routerLink="/ADMIN" class="btn btn-secondary">HOME</a>
+        </form>
+        
